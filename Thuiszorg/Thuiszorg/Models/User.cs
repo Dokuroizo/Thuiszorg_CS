@@ -19,6 +19,7 @@ namespace Thuiszorg.Models
         [Required]
         public string passWord { get; set; }
 
+        [Required]
         public string role { get; set; }
 
         [EmailAddress]
