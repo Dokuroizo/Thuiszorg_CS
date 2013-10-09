@@ -1,0 +1,57 @@
+﻿@model Thuiszorg.Models.Request
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Request</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.title)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.title)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.dateAndTimeAdded)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.dateAndTimeAdded)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.dateAndTimeRequest)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.dateAndTimeRequest)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.user)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.user)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.completed)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.completed)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

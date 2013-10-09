@@ -1,0 +1,77 @@
+﻿@model Thuiszorg.Models.Request
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Request</legend>
+
+        @Html.HiddenFor(model => model.ID)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.title)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.title)
+            @Html.ValidationMessageFor(model => model.title)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.description)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.description)
+            @Html.ValidationMessageFor(model => model.description)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.dateAndTimeAdded)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.dateAndTimeAdded)
+            @Html.ValidationMessageFor(model => model.dateAndTimeAdded)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.dateAndTimeRequest)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.dateAndTimeRequest)
+            @Html.ValidationMessageFor(model => model.dateAndTimeRequest)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.user)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.user)
+            @Html.ValidationMessageFor(model => model.user)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.completed)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.completed)
+            @Html.ValidationMessageFor(model => model.completed)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
