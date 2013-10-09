@@ -21,6 +21,7 @@ namespace Thuiszorg.Models
         public string lastName { get; set; }
 
         [Required]
+        [StringLength(25,MinimumLength=5)]
         public string password { get; set; }
 
         [Required]
@@ -29,16 +30,21 @@ namespace Thuiszorg.Models
         [EmailAddress]
         public string email { get; set; }
 
+        [Required]
         public string city { get; set; }
 
+        [Required]
         public string zipcode { get; set; }
         
+        [Required]
         public string street { get; set; }
         
+        [Required]
         public string homeNumber { get; set; }
 
         public string homeNumberExtra { get; set; }
 
+        [Required]
         public string homeTelephone { get; set; }
 
         public string mobileTelephone { get; set; }

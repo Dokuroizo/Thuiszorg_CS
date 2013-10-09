@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -15,12 +16,15 @@ namespace Thuiszorg.Models
     {
         public int ID { get; set; }
 
+        [Required]
         public string title { get; set; }
 
+        [Required]
         public string description { get; set; }
 
         public DateTime dateAndTimeAdded { get; set; }
 
+        [Required]
         public DateTime dateAndTimeRequest { get; set; }
 
         public string user { get; set; }
