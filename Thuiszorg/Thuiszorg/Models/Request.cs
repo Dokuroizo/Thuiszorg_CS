@@ -13,7 +13,9 @@ namespace Thuiszorg.Models
 
         public string description { get; set; }
 
-        public DateTime dateAndTime { get; set; }
+        public DateTime dateAndTimeAdded { get; set; }
+
+        public DateTime dateAndTimeRequest { get; set; }
 
         public string user { get; set; }
 
