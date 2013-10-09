@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
+/* Request  
+ * De taken die moeten worden uitgevoerd door personen.
+ * Deze taak wordt aangemaakt.
+ * */
+
 namespace Thuiszorg.Models
 {
     public class Request
@@ -19,8 +24,6 @@ namespace Thuiszorg.Models
 
         public string user { get; set; }
 
-        public bool completed { get; set; }
-
-        
+        public bool completed { get; set; }       
     }
 }
