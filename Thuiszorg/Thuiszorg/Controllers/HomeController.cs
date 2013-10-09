@@ -11,7 +11,7 @@ namespace Thuiszorg.Controllers
 {
     public class HomeController : Controller
     {
-        private ThuiszorgContext db = new ThuiszorgContext();
+        private UserContext db = new UserContext();
 
         //
         // GET: /Home/
@@ -46,6 +46,7 @@ namespace Thuiszorg.Controllers
         // POST: /Home/Create
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(User user)
         {
             if (ModelState.IsValid)
@@ -75,6 +76,7 @@ namespace Thuiszorg.Controllers
         // POST: /Home/Edit/5
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Edit(User user)
         {
             if (ModelState.IsValid)
@@ -103,6 +105,7 @@ namespace Thuiszorg.Controllers
         // POST: /Home/Delete/5
 
         [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
             User user = db.Users.Find(id);
