@@ -6,6 +6,7 @@ using System.Web;
 /* Request  
  * De taken die moeten worden uitgevoerd door personen.
  * Deze taak wordt aangemaakt.
+ * Dit is de taak van een persoon en wat hij moet doen en wanneer
  * */
 
 namespace Thuiszorg.Models

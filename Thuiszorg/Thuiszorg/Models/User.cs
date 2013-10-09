@@ -4,6 +4,10 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
+/* User  
+ * DE eigenschappen van een gebruiker van het platform.
+ * */
+
 namespace Thuiszorg.Models
 {
     public class User
