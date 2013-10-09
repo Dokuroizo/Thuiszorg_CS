@@ -30,7 +30,7 @@ namespace Thuiszorg.Models
         public string zipcode { get; set; }
         
         public string street { get; set; }
-
+        
         public string homeNumber { get; set; }
 
         public string homeNumberExtra { get; set; }
