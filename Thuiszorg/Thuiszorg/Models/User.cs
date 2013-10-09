@@ -17,7 +17,7 @@ namespace Thuiszorg.Models
         public string lastName { get; set; }
 
         [Required]
-        public string passWord { get; set; }
+        public string password { get; set; }
 
         [Required]
         public string role { get; set; }
@@ -27,6 +27,16 @@ namespace Thuiszorg.Models
 
         public string city { get; set; }
 
-        public string telephone { get; set; }
+        public string zipcode { get; set; }
+        
+        public string street { get; set; }
+
+        public string homeNumber { get; set; }
+
+        public string homeNumberExtra { get; set; }
+
+        public string homeTelephone { get; set; }
+
+        public string mobileTelephone { get; set; }
     }
 }
