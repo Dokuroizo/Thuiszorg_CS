@@ -6,49 +6,49 @@
 
 <h2>Details</h2>
 
-<fieldset>
-    <legend>Request</legend>
+ <fieldset>
+    <legend></legend>
 
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.title)
+         <b>@Html.Label("Naam")</b>
     </div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.title)
-    </div>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.description)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.description)
+         @Html.DisplayFor(model => model.user)
     </div>
 
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.dateAndTimeAdded)
+         <b>@Html.Label("Taak")</b>
     </div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.dateAndTimeAdded)
+         @Html.DisplayFor(model => model.title)
     </div>
 
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.dateAndTimeRequest)
+         <b>@Html.Label("Beschrijving")</b>
     </div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.dateAndTimeRequest)
+         @Html.DisplayFor(model => model.description)
     </div>
 
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.user)
+         <b>@Html.Label("Hulp nodig om")</b>
     </div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.user)
+         @Html.DisplayFor(model => model.dateAndTimeRequest)
     </div>
 
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.completed)
+        <b>@Html.Label("Toegevoegd om")</b> 
     </div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.completed)
+         @Html.DisplayFor(model => model.dateAndTimeAdded)
+    </div>
+
+    <div class="display-label">
+         <b>@Html.Label("Status")</b>
+    </div>
+    <div class="display-field">
+         @Html.DisplayFor(model => model.completed)
     </div>
 </fieldset>
 <p>

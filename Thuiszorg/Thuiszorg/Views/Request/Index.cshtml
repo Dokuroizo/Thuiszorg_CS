@@ -7,27 +7,42 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Taak toevoegen", "Create")
 </p>
 <table>
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.title)
+            @Html.Label("Naam")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.description)
+            
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.dateAndTimeAdded)
+             @Html.Label("Taak")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.dateAndTimeRequest)
+            
+        </th>
+        <th>       
+             @Html.Label("Beschrijving")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.user)
+             
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.completed)
+            @Html.Label("Hulp nodig om")
+        </th>
+        <th>
+           
+        </th>
+        <th>
+             @Html.Label("Toegevoegd om")
+        </th>
+        <th>
+             
+        </th>
+        <th>
+            @Html.Label("Status")
         </th>
         <th></th>
     </tr>
@@ -35,22 +50,38 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.dateAndTimeAdded)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.dateAndTimeRequest)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.user)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.completed)
+          
+        </td>
+        <td>
+              @Html.DisplayFor(modelItem => item.title)
+        </td>
+        <td>
+           
+        </td>
+        <td>
+                 @Html.DisplayFor(modelItem => item.description)
+        </td>
+        <td>
+          
+        </td>
+        <td>
+              @Html.DisplayFor(modelItem => item.dateAndTimeRequest)
+        </td>
+        <td>
+            
+        </td>
+        <td>
+             @Html.DisplayFor(modelItem => item.dateAndTimeAdded)
+      
+        </td>
+        <td>
+           
+        </td>
+        <td>
+             @Html.DisplayFor(modelItem => item.completed)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |

@@ -52,6 +52,7 @@ namespace Thuiszorg.Controllers
             if (ModelState.IsValid)
             {
                 db.Requests.Add(request);
+                request.dateAndTimeAdded = DateTime.Now;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

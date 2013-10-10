@@ -4,7 +4,10 @@
     ViewBag.Title = "Create";
 }
 
+
+
 <h2>Create</h2>
+
 
 @using (Html.BeginForm()) {
     @Html.AntiForgeryToken()
@@ -12,41 +15,9 @@
 
     <fieldset>
         <legend>Request</legend>
-
+        
         <div class="editor-label">
-            @Html.LabelFor(model => model.title)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.title)
-            @Html.ValidationMessageFor(model => model.title)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.description)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.description)
-            @Html.ValidationMessageFor(model => model.description)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.dateAndTimeAdded)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.dateAndTimeAdded)
-            @Html.ValidationMessageFor(model => model.dateAndTimeAdded)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.dateAndTimeRequest)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.dateAndTimeRequest)
-            @Html.ValidationMessageFor(model => model.dateAndTimeRequest)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.user)
+             @Html.Label("Naam")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.user)
@@ -54,12 +25,33 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.completed)
+             @Html.Label("Taak")
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.completed)
-            @Html.ValidationMessageFor(model => model.completed)
+            @Html.EditorFor(model => model.title)
+            @Html.ValidationMessageFor(model => model.title)
         </div>
+
+        <div class="editor-label">
+             @Html.Label("Beschrijving")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.description)
+            @Html.ValidationMessageFor(model => model.description)
+        </div>
+
+       
+        <div class="editor-label">
+            @Html.Label("Hulp nodig om")
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model=> model.dateAndTimeRequest,"{0:d}", new {  @class = "datefield"})
+            @Html.ValidationMessageFor(model => model.dateAndTimeRequest)   
+
+
+        </div>
+
+            
 
         <p>
             <input type="submit" value="Create" />
@@ -68,9 +60,18 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Terug naar taken overzicht", "Index")
 </div>
 
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
+
+
+
+@section Scripts{
+    @*@Scripts.Render("~/bundles/jqueryval")*@
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.datepicker.setDefaults({ dateFormat: 'dd/mm/yy' });
+            $(".datefield").datepicker();
+        });
+    </script>
 }
