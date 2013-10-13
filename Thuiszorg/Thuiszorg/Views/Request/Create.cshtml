@@ -47,10 +47,15 @@
         <div class="editor-field">
             @Html.TextBoxFor(model=> model.dateAndTimeRequest,"{0:d}", new {  @class = "datefield"})
             @Html.ValidationMessageFor(model => model.dateAndTimeRequest)   
+            </div>
 
-
+     <div class="editor-label">
+             @Html.Label("Tijd")
         </div>
-
+        <div class="editor-field">
+            @Html.EditorFor(model => model.timeRequest)
+            @Html.ValidationMessageFor(model => model.timeRequest)
+        </div>
             
 
         <p>

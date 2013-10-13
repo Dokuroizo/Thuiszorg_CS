@@ -6,12 +6,13 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Thuiszorg.Models;
+using Thuiszorg.Models.Thuiszorg2;
 
 namespace Thuiszorg.Controllers
 {
     public class RequestController : Controller
     {
-        private RequestContext db = new RequestContext();
+        private _0Context db = new _0Context();
 
         //
         // GET: /Request/
@@ -46,13 +47,12 @@ namespace Thuiszorg.Controllers
         // POST: /Request/Create
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult Create(Request request)
         {
             if (ModelState.IsValid)
             {
-                db.Requests.Add(request);
                 request.dateAndTimeAdded = DateTime.Now;
+                db.Requests.Add(request);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -77,7 +77,6 @@ namespace Thuiszorg.Controllers
         // POST: /Request/Edit/5
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult Edit(Request request)
         {
             if (ModelState.IsValid)
@@ -106,7 +105,6 @@ namespace Thuiszorg.Controllers
         // POST: /Request/Delete/5
 
         [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
             Request request = db.Requests.Find(id);

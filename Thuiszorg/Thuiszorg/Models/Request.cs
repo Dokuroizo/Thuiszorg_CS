@@ -27,6 +27,9 @@ namespace Thuiszorg.Models
         [Required]
         public DateTime dateAndTimeRequest { get; set; }
 
+        [Required]
+        public string timeRequest { get; set; }
+
         public string user { get; set; }
 
         public bool completed { get; set; }       

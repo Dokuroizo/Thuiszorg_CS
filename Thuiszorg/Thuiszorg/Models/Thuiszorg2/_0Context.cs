@@ -1,8 +1,8 @@
 ﻿using System.Data.Entity;
 
-namespace Thuiszorg.Models
+namespace Thuiszorg.Models.Thuiszorg2
 {
-    public class UserContext : DbContext
+    public class _0Context : DbContext
     {
         // You can add custom code to this file. Changes will not be overwritten.
         // 
@@ -11,12 +11,12 @@ namespace Thuiszorg.Models
         // code to the Application_Start method in your Global.asax file.
         // Note: this will destroy and re-create your database with every model change.
         // 
-        // System.Data.Entity.Database.SetInitializer(new System.Data.Entity.DropCreateDatabaseIfModelChanges<Thuiszorg.Models.UserContext>());
+        // System.Data.Entity.Database.SetInitializer(new System.Data.Entity.DropCreateDatabaseIfModelChanges<Thuiszorg.Models.Thuiszorg2._0Context>());
 
-        public UserContext() : base("name=UserContext")
+        public _0Context() : base("name=_0Context")
         {
         }
 
-        public DbSet<User> Users { get; set; }
+        public DbSet<Request> Requests { get; set; }
     }
 }
