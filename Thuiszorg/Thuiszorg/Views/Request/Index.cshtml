@@ -22,28 +22,12 @@
         </th>
         <th>
             
-        </th>
-        <th>       
-             @Html.Label("Beschrijving")
-        </th>
-        <th>
              
-        </th>
-        <th>
-            @Html.Label("Hulp nodig om")
-        </th>
-        <th>
            
         </th>
         <th>
               <th>
              
-        </th>
-        <th>
-            @Html.Label("Tijd")
-        </th>
-        <th>
-           
         </th>
         <th>
              @Html.Label("Toegevoegd om")
@@ -69,30 +53,12 @@
               @Html.DisplayFor(modelItem => item.title)
         </td>
         <td>
-           
-        </td>
-        <td>
-                 @Html.DisplayFor(modelItem => item.description)
-        </td>
-        <td>
           
-        </td>
-        <td>
-              @Html.DisplayFor(modelItem => item.dateAndTimeRequest)
-        </td>
-        <td>
             
         </td>
         <td>
               <td>
           
-        </td>
-        <td>
-              @Html.DisplayFor(modelItem => item.timeRequest)
-        </td>
-        <td>
-            
-        </td>
         <td>
              @Html.DisplayFor(modelItem => item.dateAndTimeAdded)
       
@@ -106,9 +72,14 @@
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
             @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID }) |
+            @Html.ActionLink("Accept", "Index", new { id=item.ID }) 
+
         </td>
     </tr>
+    <br />
+    
+    
 }
 
 </table>

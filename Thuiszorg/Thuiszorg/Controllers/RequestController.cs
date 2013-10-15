@@ -13,6 +13,7 @@ namespace Thuiszorg.Controllers
     public class RequestController : Controller
     {
         private _0Context db = new _0Context();
+        public bool acceptance = false;
 
         //
         // GET: /Request/
@@ -111,6 +112,12 @@ namespace Thuiszorg.Controllers
             db.Requests.Remove(request);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        public ActionResult Accept(bool acceptance)
+        {
+            acceptance = true;
+            return View("Index",acceptance);
         }
 
         protected override void Dispose(bool disposing)
