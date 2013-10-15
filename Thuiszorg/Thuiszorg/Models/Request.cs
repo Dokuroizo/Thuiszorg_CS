@@ -32,6 +32,8 @@ namespace Thuiszorg.Models
 
         public string user { get; set; }
 
-        public bool completed { get; set; }       
+        public bool completed { get; set; }
+
+        public bool accept { get; set; }
     }
 }

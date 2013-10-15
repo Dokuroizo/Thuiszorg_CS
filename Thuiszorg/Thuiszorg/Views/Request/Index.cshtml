@@ -38,6 +38,12 @@
         <th>
             @Html.Label("Status")
         </th>
+             <th>
+             
+        </th>
+        <th>
+            @Html.Label("Geaccepteerd")
+        </th>
         <th></th>
     </tr>
 
@@ -69,15 +75,25 @@
         <td>
              @Html.DisplayFor(modelItem => item.completed)
         </td>
+
+        <td>
+           
+        </td>
+        <td>
+            @if (item.accept == true)
+            { <p>Geaccepteerd door een van onze vrijwilligers!</p>}
+            else
+            {<p> Nog niet geaccepteerd door een van onze vrijwilligers</p><br />}
+             
+        </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
             @Html.ActionLink("Details", "Details", new { id=item.ID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.ID }) |
-            @Html.ActionLink("Accept", "Index", new { id=item.ID }) 
+            @Html.ActionLink("Accept", "Accept", new { id = item.ID }) 
 
         </td>
     </tr>
-    <br />
     
     
 }

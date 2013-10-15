@@ -6,14 +6,12 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Thuiszorg.Models;
-using Thuiszorg.Models.Thuiszorg2;
 
 namespace Thuiszorg.Controllers
 {
     public class RequestController : Controller
     {
-        private _0Context db = new _0Context();
-        public bool acceptance = false;
+        private versie01Context db = new versie01Context();
 
         //
         // GET: /Request/
@@ -114,10 +112,12 @@ namespace Thuiszorg.Controllers
             return RedirectToAction("Index");
         }
 
-        public ActionResult Accept(bool acceptance)
+        public ActionResult Accept(int id =0)
         {
-            acceptance = true;
-            return View("Index",acceptance);
+            Request request = db.Requests.Find(id);
+            request.accept = true;
+            db.SaveChanges();
+            return RedirectToAction("Index", request);
         }
 
         protected override void Dispose(bool disposing)
