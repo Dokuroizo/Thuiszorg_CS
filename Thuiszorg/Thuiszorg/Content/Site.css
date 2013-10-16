@@ -2,7 +2,7 @@
    font-size: .85em;
    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
    color: #232323;
-   background-color: #9CB31D;
+   background-color: #FFFEF5;
    border-top: solid 10px #000;
    margin: 0;
    padding: 0;
@@ -88,7 +88,7 @@ ul#menu li
     ul#menu li a
     {
         background: none;
-        color: #999;
+        color: #FFFFFF;
         text-decoration: none;
     }
 
@@ -100,7 +100,7 @@ ul#menu li
 
 header
 {
-    background-color: #7ac0da;
+    background-color: #3EE852;
     color: #3e5667;
     padding: 20px 40px 30px 40px;
 }
@@ -118,8 +118,10 @@ header
 }
 
 #footer { 
+    background-color: #3EE852;
+    text-align: center;
     clear: both;
-    padding: 20px 20px 10px; 
+    padding: 30px 30px 30px 30px; 
     font-size: .9em; 
     margin: auto;  
 }
@@ -130,7 +132,7 @@ header
 }
 
 #main {
-    background: #999966;
+    background: #C4FFC7;
     min-height: 500px;
     padding: 20px;
 }
